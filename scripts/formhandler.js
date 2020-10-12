@@ -32,7 +32,7 @@
           console.log(item.name + ' is ' + item.value);
         });
         console.log(data);
-        
+
         fn(data);
 
         this.reset();
@@ -43,16 +43,16 @@
       console.log('Setting input handler for form');
       this.$formElement.on('input', '[name="emailAddress"]', function (event) {
         // Event handler code will go here
-          var emailAddress = event.target.value;
-          var message = '';
-          if (fn(emailAddress)) {
-            event.target.setCustomValidity('');
-            } else {
-            message = emailAddress + ' is not an authorized email address!'
-            event.target.setCustomValidity(message);
-            }
-        });
-      };
+        var emailAddress = event.target.value;
+        var message = '';
+        if (fn(emailAddress)) {
+          event.target.setCustomValidity('');
+        } else {
+          message = emailAddress + ' is not an authorized email address!'
+          event.target.setCustomValidity(message);
+        }
+      });
+    };
     // FormHandler.prototype.addSubmitHandler = function(jn) {
     //   console.log('Setting submit handler for form');
     //   this.$formElement.on('submit', function(event){

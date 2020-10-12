@@ -4,9 +4,9 @@
 
     var Validation = {
         isCompanyEmail: function (email) {
-        return /fullerton\.com/.test(email);
+            return /fullerton\.com/.test(email);
         }
-        };
+    };
     App.Validation = Validation;
     window.App = App;
-    })(window);
+})(window);
